@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>News in Brief</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+        <!--[if lte IE 8]>
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
+    <!--<![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+    /* Set your content font stack here: */
+    font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+.header {
+  text-align: center;
+}
+
+.center {
+  text-align: center
+}
+
+.wrapper {
+  margin:20px 20% 0px 20%;
+}
+
+
+</style>
+
+  </head>
+
+<%= render "header" %>
+
+<div class="wrapper">
+<div class="pure-g">
+<div class="pure-u-1-3 center">
+<p>
+In today's increasingly fast-paced society, people need to be efficient in getting through their pre-existing obligations, yet also simultaneously be informed of current events. 
+<br />
+<br />
+Conventional news-media outlets provide the necessary information, but in a way that requires already limited time and energy. A possible solution to this 21st-dilemma would be an online source of the day's most integral and vital happenings, summarized in a way that highlights the essentials. 
+<br />
+<br />
+It is because of this reason we have created Brief.- a resource containing straightforward descriptions of international events with widespread repercussions.
+<br />
+<br />
+Our purpose with this site is therefore to provide news in a format that is compatible to our fast-paced life, but also hopefully spread awareness of global affairs.
+
+</p>
+
+</div>
+</div>
+</div>
+
+<%= link_to 'New Article', new_article_path %>
+
+<%= link_to "Stories", stories_path %>
+<%= link_to "Mission", mission_path %>
+<%= link_to "About", about_path %>
+<%= link_to "Contact", contact_path %>
+<br />
+<%= link_to "All Articles", articles_path %>

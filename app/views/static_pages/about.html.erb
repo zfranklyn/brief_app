@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>News in Brief</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+        <!--[if lte IE 8]>
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
+    <!--<![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+    /* Set your content font stack here: */
+    font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+.header {
+  text-align: center;
+}
+
+.center {
+  text-align: center
+}
+
+</style>
+
+  </head>
+
+
+
+<%= render "header" %>
+<p>
+
+Brief. was started at Queen Mary University of London as a reaction to what we thought was informative, yet too intricate news that we were seeing from major news agencies.
+<br />
+<br />
+At Brief. we take what we think are important articles from trusted news outlets like CNN, The Times, The Guardian or Al Jazeera and shrink them into articles no longer than 150 words every Monday, Wednesday and Friday. 
+<br />
+<br />
+Currently we are briefing about 6 articles a day with hopes to increase this number to 8 shortly. As it is not in Brief.’s philosophy to drown readers in current events this number is unlikely to move up far beyond 16. We are always looking for suggestions and we are always looking for new people; so please do get in touch with us at our ‘Contact’ page if you would like to join the team. 
+
+</p>
+<%= link_to 'New Article', new_article_path %>
+
+<%= link_to "Stories", stories_path %>
+<%= link_to "Mission", mission_path %>
+<%= link_to "About", about_path %>
+<%= link_to "Contact", contact_path %>
+<br />
+<%= link_to "All Articles", articles_path %>
