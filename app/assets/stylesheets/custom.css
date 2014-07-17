@@ -1,0 +1,42 @@
+      html, button, input, select, textarea,
+      .pure-g [class *= "pure-u"] {
+          /* Set your content font stack here: */
+          font-family: Georgia, Times, "Times New Roman", serif;
+      }
+
+      .content {
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 1em;
+        padding-left: 1em;
+        padding-right: 1em;
+        max-width: 768px;
+        text-align: center
+      }
+
+
+      .contentbody {
+        font-family: "Georgia";
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 1em;
+        padding-left: 1em;
+        padding-right: 1em;
+        max-width: 468px;
+        text-align: center
+      }      
+
+      .header {
+        padding-top: 2em;
+        border-bottom: 1px solid #eee;
+        text-align: center;
+      }
+
+      .actualbody {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .sansserif {
+        font-family: "Lato";
+      }

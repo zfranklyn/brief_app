@@ -22,12 +22,12 @@
  
   <p>
   	<%= f.label :image, 'Upload Image'%><br>
-	<% if @article.image? %>
-	<%= image_tag @article.image.url(:thumb) %>
-	<%= f.check_box :remove_image%>
-	<% end %>
+	<%= image_tag @article.image.url(:thumb) %><br>
+	<%= f.file_field :image %>
+	<br>
 
-  	<%= f.file_field :image %>
+
+  	
   </p>
 
 
