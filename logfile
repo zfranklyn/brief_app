@@ -1,0 +1,54 @@
+LOG:  database system was shut down at 2014-07-18 17:54:31 EDT
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+FATAL:  role "root" does not exist
+FATAL:  role "root" does not exist
+FATAL:  role "franklyn" does not exist
+FATAL:  role "franklyn" does not exist
+FATAL:  role "franklyn" does not exist
+FATAL:  role "franklyn" does not exist
+ERROR:  syntax error at or near "psql" at character 1
+STATEMENT:  psql
+	database_name
+	psql postgres franklyn
+	;
+ERROR:  syntax error at or near "database_name" at character 1
+STATEMENT:  database_name;
+ERROR:  syntax error at or near "createuser" at character 1
+STATEMENT:  createuser franklyn
+	CREATE ROLE franklyn;
+ERROR:  syntax error at or near "$" at character 1
+STATEMENT:  $ createuser franklyn
+	CREATE ROLE franklyn;
+ERROR:  role "franklyn" already exists
+STATEMENT:  CREATE ROLE franklyn LOGIN PASSWORD '' NOINHERIT CREATEDB;
+ERROR:  syntax error at or near "exit" at character 1
+STATEMENT:  exit;
+ERROR:  syntax error at or near "q" at character 1
+STATEMENT:  q;
+FATAL:  role "franklyn" is not permitted to log in
+FATAL:  role "franklyn" is not permitted to log in
+FATAL:  database "mac" does not exist
+FATAL:  database "mydb" does not exist
+FATAL:  database "l" does not exist
+ERROR:  syntax error at or near "psql" at character 1
+STATEMENT:  psql database_name;
+ERROR:  syntax error at or near "psql" at character 1
+STATEMENT:  psql 
+	psql 
+	DROP DATABSE template0;
+ERROR:  syntax error at or near "[" at character 15
+STATEMENT:  DROP DATABASE [ IF EXISTS ] template0
+	psql 
+	SHOW postgres
+	SHOW
+	;
+ERROR:  syntax error at or near "[" at character 15
+STATEMENT:  DROP DATABASE [ IF EXISTS ] template0;
+ERROR:  cannot drop a template database
+STATEMENT:  DROP DATABASE template0;
+FATAL:  role "franklyn" is not permitted to log in
+FATAL:  database "store_development" does not exist
+FATAL:  database "store_development" does not exist
+ERROR:  database "brief_development" already exists
+STATEMENT:  CREATE DATABASE "brief_development" ENCODING = 'unicode'
