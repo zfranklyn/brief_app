@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'users/new'
+
 resources :articles
 
 match '/mission',     to: 'static_pages#mission',    via: 'get'

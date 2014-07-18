@@ -1,0 +1,22 @@
+<table class="profile" summary="Profile information">
+  <tr>
+    <td class="main">
+      <h1>
+        <%= @user.name %>
+      </h1>
+      <%= render 'follow_form' if signed_in? %>
+      <% if @user.articles.any? %>
+        <table class="articles" summary="User articles">
+          <%= render @articles %>
+        </table>
+        <%= will_paginate @articles %>
+      <% end %>
+    </td>
+    <td class="sidebar round">
+      <strong>Name</strong> <%= @user.name %><br />
+      <strong>URL</strong>  <%= link_to user_path(@user), @user %><br />
+      <strong>Articles</strong> <%= @user.articles.count %>
+      <%= render 'shared/stats' %>
+    </td>
+  </tr>
+</table>
