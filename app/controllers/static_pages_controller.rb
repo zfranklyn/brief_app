@@ -11,7 +11,7 @@ class StaticPagesController < ApplicationController
 
   def stories
 	# @articles = Article.order("created_at desc").limit(6)
-	@articles = Article.all
+	@articles = Article.order("created_at desc").limit(8)
   end
 
 

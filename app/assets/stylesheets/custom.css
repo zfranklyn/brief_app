@@ -5,26 +5,39 @@
       }
 
       .content {
+        border-top-color: black;
+        border-top-width: .5em;
+        border-top-style: solid;
         margin-left: auto;
         margin-right: auto;
         padding-top: 1em;
         padding-left: 1em;
         padding-right: 1em;
-        max-width: 768px;
+        max-width: 100%;
         text-align: center
       }
 
+      .center {
+        text-align: center;
+      }
 
       .contentbody {
         font-family: "Georgia";
         margin-left: auto;
         margin-right: auto;
-        padding-top: 1em;
-        padding-left: 1em;
-        padding-right: 1em;
-        max-width: 468px;
+        padding-top: 2em;
+        max-width: 500px;
         text-align: center
       }      
+
+      .articlebody {
+        font-family: "Georgia";
+        text-align: left;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 2em;
+        max-width: 500px;
+      }            
 
       .header {
         padding-top: 2em;

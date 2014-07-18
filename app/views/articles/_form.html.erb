@@ -1,3 +1,7 @@
+<div class="content">
+
+<div class="pure-form">
+
 <%= form_for @article, :html => { :multipart => true } do |f| %>
   <% if @article.errors.any? %>
   <div id="error_explanation">
@@ -30,8 +34,9 @@
   	
   </p>
 
-
-  <p>
-    <%= f.submit %>
-  </p>
+    <%= f.submit 'Save Article', :class => 'pure-button' %>
 <% end %>
+
+</div>
+
+</div>

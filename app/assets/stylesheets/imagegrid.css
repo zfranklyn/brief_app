@@ -1,0 +1,12 @@
+
+.imagegrid {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.image {
+	cursor: pointer;
+	margin-bottom: 0em;
+    margin-left: 0em;
+    margin-right: 0em;
+}
