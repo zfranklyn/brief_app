@@ -41,7 +41,7 @@ test:
   username: mac
   password: 
 
-  production:
+production:
   adapter: postgresql
   encoding: unicode
   database: brief_production
