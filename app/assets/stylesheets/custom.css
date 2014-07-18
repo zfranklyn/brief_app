@@ -1,7 +1,7 @@
       html, button, input, select, textarea,
       .pure-g [class *= "pure-u"] {
           /* Set your content font stack here: */
-          font-family: Georgia, Times, "Times New Roman", serif;
+          font-family: 'Lora', Georgia, Times, serif;
       }
 
       .content {
@@ -22,7 +22,7 @@
       }
 
       .contentbody {
-        font-family: "Georgia";
+        font-family: 'Lora', serif;
         margin-left: auto;
         margin-right: auto;
         padding-top: 2em;
@@ -31,7 +31,7 @@
       }      
 
       .articlebody {
-        font-family: "Georgia";
+        font-family: 'Lora', serif;
         text-align: left;
         margin-left: auto;
         margin-right: auto;
@@ -51,5 +51,5 @@
       }
 
       .sansserif {
-        font-family: "Lato";
+        font-family: "Open Sans", sans-serif;
       }
