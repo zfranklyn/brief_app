@@ -14,5 +14,7 @@ class StaticPagesController < ApplicationController
 	@articles = Article.order("created_at desc").limit(8)
   end
 
+  def admin
+  end
 
 end

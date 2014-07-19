@@ -1,4 +1,4 @@
-<div class="content">
+<div class="contentbody", style="">
 
 <div class="pure-form">
 
@@ -14,25 +14,24 @@
     </ul>
   </div>
   <% end %>
-  <p>
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </p>
+  <div>
+<!--     <%= f.label :title %><br> -->
+    <%= f.text_field :title, :placeholder => "Title...", :class => "pure-u-5-6" %>
+  </div>
  
-  <p>
-    <%= f.label :text %><br>
-    <%= f.text_area :text %>
-  </p>
+  <div>
+<!--     <%= f.label :text %><br> -->
+    <%= f.text_area :text, :placeholder => "Text...", :class => "pure-u-5-6", :style => "height: 300px" %>
+  </div>
  
-  <p>
-  	<%= f.label :image, 'Upload Image'%><br>
-	<%= image_tag @article.image.url(:thumb) %><br>
-	<%= f.file_field :image %>
+  <div>
+  	<%= f.label :image, 'Upload Image', :style => "" %><br>
+	<%= image_tag @article.image.url(:thumb), :style => "" %><br>
+	<%= f.file_field :image, :style => "" %>
 	<br>
 
 
-  	
-  </p>
+  </div>
 
     <%= f.submit 'Save Article', :class => 'pure-button' %>
 <% end %>
