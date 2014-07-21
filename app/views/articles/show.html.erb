@@ -12,11 +12,8 @@
 </p>
 
 <p>
-  <%= simple_format((@article.text)) %>
-</p>
-
-<p>
-  <%= simple_format((@article.country)) %>
+	<i><%= (@article.country) + '. ' %> </i>
+	<%= simple_format(@article.text) %>
 </p>
 
 <br>

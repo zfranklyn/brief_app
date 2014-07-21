@@ -1,11 +1,10 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.3'
 # Use pg as the database for Active Record
 gem 'pg'
-gem 'rails_12factor', '0.0.2'
+gem 'rails_12factor', '0.0.2', group: :production
 gem 'taps'
 #encryption
 gem 'bcrypt-ruby', :require => 'bcrypt'
