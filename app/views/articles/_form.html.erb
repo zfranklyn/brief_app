@@ -2,7 +2,7 @@
 
 	<div class="pure-form">
 
-		<%= simple_form_for(@article, :html => { :multipart => true }) do |f| %>
+		<%= form_for(@article, :html => { :multipart => true }) do |f| %>
 			<p>
 				<%= f.text_field :title, :placeholder => "Title...", :class => "pure-u-5-6" %>
 			</p>
