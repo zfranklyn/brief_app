@@ -1,41 +1,37 @@
 <div class="contentbody", style="">
 
-<div class="pure-form">
+	<div class="pure-form">
 
-<%= form_for @article, :html => { :multipart => true } do |f| %>
-  <% if @article.errors.any? %>
-  <div id="error_explanation">
-    <h2><%= pluralize(@article.errors.count, "error") %> prohibited
-      this article from being saved:</h2>
-    <ul>
-    <% @article.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-    </ul>
-  </div>
-  <% end %>
-  <div>
-<!--     <%= f.label :title %><br> -->
-    <%= f.text_field :title, :placeholder => "Title...", :class => "pure-u-5-6" %>
-  </div>
- 
-  <div>
-<!--     <%= f.label :text %><br> -->
-    <%= f.text_area :text, :placeholder => "Text...", :class => "pure-u-5-6", :style => "height: 300px" %>
-  </div>
- 
-  <div>
-  	<%= f.label :image, 'Upload Image', :style => "" %><br>
-	<%= image_tag @article.image.url(:thumb), :style => "" %><br>
-	<%= f.file_field :image, :style => "" %>
-	<br>
+		<%= simple_form_for(@article, :html => { :multipart => true }) do |f| %>
+			<p>
+				<%= f.text_field :title, :placeholder => "Title...", :class => "pure-u-5-6" %>
+			</p>
+			<p>
+			    <%= f.text_field :region, :placeholder => "Region...", :class => "pure-u-5-6" %>
+			</p>
+			<p>
+				<%= f.text_field :country, :placeholder => "Country...", :class => "pure-u-5-6" %>
+			</p>
+			<p>
+			    <%= f.text_area :text, :placeholder => "Text...", :class => "pure-u-5-6", :style => "height: 300px" %>
+			</p>
+			<p>
+			  	<%= f.label :image, 'Upload Image', :style => "" %><br>
+				<%= image_tag @article.image.url(:thumb), :style => "" %><br>
+				<%= f.file_field :image, :style => "" %>
+			<br>
+		  	</p>
 
-
-  </div>
-
-    <%= f.submit 'Save Article', :class => 'pure-button' %>
-<% end %>
-
-</div>
+			    <%= f.text_field :originallink, :placeholder => "Original Article URL...", :class => "pure-u-5-6" %>
+			<p>
+				<%= link_to 'Back', :back, :class => "pure-button" %>
+			    <%= f.submit 'Save Article', :class => 'pure-button' %>
+				<% if local_assigns.has_key? :edit %>
+					<%= link_to 'Delete', article_path(@article),
+				          method: :delete, data: { confirm: 'Are you sure?'}, :class => "pure-button" %>
+				<%end%>
+				<% end %>
+		  	</p>
+	</div>
 
 </div>

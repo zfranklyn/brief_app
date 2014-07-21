@@ -34,6 +34,12 @@ gem 'spring',        group: :development
 
 gem 'rack'
 
+#infinite scrolling gems
+gem 'will_paginate', '~> 3.0'
+
+#simple form for form generation and validation
+gem 'simple_form'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

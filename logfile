@@ -52,3 +52,7 @@ FATAL:  database "store_development" does not exist
 FATAL:  database "store_development" does not exist
 ERROR:  database "brief_development" already exists
 STATEMENT:  CREATE DATABASE "brief_development" ENCODING = 'unicode'
+ERROR:  value too long for type character varying(255)
+STATEMENT:  UPDATE "articles" SET "originallink" = $1, "region" = $2, "text" = $3, "title" = $4, "updated_at" = $5 WHERE "articles"."id" = 16
+ERROR:  value too long for type character varying(255)
+STATEMENT:  UPDATE "articles" SET "originallink" = $1, "region" = $2, "text" = $3, "title" = $4, "updated_at" = $5 WHERE "articles"."id" = 16

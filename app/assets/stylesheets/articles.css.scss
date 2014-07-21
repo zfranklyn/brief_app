@@ -1,3 +1,77 @@
 // Place all the styles related to the articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*.pagination {
+  .previous_page { background:#7777ff; color:white }
+  .previous_page.disabled { background: white; color: #777 }
+  .current { background: yellow }
+  .next_page { background: #7777ff; color: white }
+  .next_page.disabled { background: white; color: #777 }
+  font-family: "Open Sans", sans-serif;
+  margin-top: 1em;
+}*/
+
+
+.pagination {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	bottom: -20px;
+  	background: '';
+  	cursor: default;
+  /* self-clearing method: */ }
+
+  .pagination a, .pagination span, .pagination em {
+    padding: 0.2em 0.5em;
+    display: inline;
+    float: center;
+    margin-right: 1px; }
+
+  .pagination .disabled {
+    color: #999999;
+    border: 1px solid #dddddd; }
+
+  .pagination .current {
+    font-style: normal;
+    font-weight: bold;
+    background: black;
+    color: white;
+    border: 1px solid #2e6ab1; }
+
+  .pagination a {
+    text-decoration: none;
+    color: lightgray;
+    border: 1px solid lightgray; }
+
+  .pagination a:hover, .pagination a:focus {
+	color: black;
+	border-color: black; }
+
+  .pagination .page_info {
+    background: #2e6ab1;
+    color: white;
+    padding: 0.4em 0.6em;
+    width: 22em;
+    margin-bottom: 0.3em;
+    text-align: center; }
+
+  .pagination .page_info b {
+	color: #000033;
+	background: #6aa6ed;
+	padding: 0.1em 0.25em; }
+
+  .pagination:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+
+  * html .pagination {
+    height: 1%; }
+
+  *:first-child + html .pagination {
+    overflow: hidden; }
+
+

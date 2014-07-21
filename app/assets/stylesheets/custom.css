@@ -1,3 +1,11 @@
+      html, body, .content {
+        height: 100%;
+      }
+
+      body > .container {
+        height: auto; min-height: 100%;
+      }
+
       html, button, input, select, textarea,
       .pure-g [class *= "pure-u"] {
           /* Set your content font stack here: */
@@ -6,6 +14,20 @@
 
       h1 {
         font-family: 'Open Sans', sans-serif;
+      }
+
+      .articlebody {
+        font-family: 'Lora', serif;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 2em;
+        max-width: 500px;
+      }            
+
+      .actualbody {
+        margin-left: auto;
+        margin-right: auto;
       }
 
       .content {
@@ -18,7 +40,7 @@
         padding-left: 1em;
         padding-right: 1em;
         max-width: 100%;
-        text-align: center
+        text-align: center;
       }
 
       .center {
@@ -34,26 +56,84 @@
         text-align: center
       }      
 
-      .articlebody {
-        font-family: 'Lora', serif;
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-        padding-top: 2em;
-        max-width: 500px;
-      }            
-
       .header {
         padding-top: 2em;
         border-bottom: 1px solid #eee;
         text-align: center;
       }
 
-      .actualbody {
-        margin-left: auto;
-        margin-right: auto;
+      .sansserif {
+        font-family: 'Open Sans', sans-serif;
       }
 
-      .sansserif {
-        font-family: "Open Sans", sans-serif;
+      #footer {
+        bottom:0;
+        position:fixed;
+        z-index:150;
+        _position:absolute;
+        _top:expression(eval(document.documentElement.scrollTop+
+            (document.documentElement.clientHeight-this.offsetHeight)));
+        height: 10%;
+        width: 100%;
+        background-color: black;
       }
+
+      #footer #text {
+        text-align: center;
+        font-family: "Open Sans", sans-serif;
+        color: white;
+        margin-top: 2em;
+        font-size: 60%;
+      }
+
+/* footer*/
+
+      #footer .icon {
+        -webkit-filter: brightness(0.4);
+        -moz-filter: brightness(0.4);
+        filter: brightness(0.4);
+
+      }
+
+      #footer .icon:hover {
+        -webkit-filter: brightness(1);
+        -moz-filter: brightness(1);
+        filter: brightness(1);
+        -webkit-transition: all .2s;
+        -moz-transition: all .2s;
+        transition: all .2s;
+      }
+
+
+/* highlighting */
+
+      *::selection {
+      background: #333333;
+      color: white;
+      }
+
+      *::-moz-selection {
+      background: #333333;
+      color: white;
+      }
+
+
+      /* error alert */
+
+      #error_explanation {
+        color: #f00;
+        font-family: "Open Sans", sans-serif;
+        ul {
+          list-style: none;
+          margin: 0 0 18px 8;
+        }
+      }
+
+      .field_with_errors {
+        @extend .control-group;
+        @extend .error;
+      }
+      }
+        }
+      }
+
