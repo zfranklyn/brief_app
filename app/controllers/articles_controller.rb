@@ -13,6 +13,7 @@ class ArticlesController < ApplicationController
 		if @article.save
 			redirect_to @article
 		else
+			flash.now[:notice] = 'Please fill out all the fields.'
 			render 'new'
 		end
 	end
