@@ -26,7 +26,6 @@ has_attached_file :image,
     }
 
   validates_attachment :image,
-    :presence => true,
     :size => { :in => 0..10.megabytes },
     :content_type => { :content_type => /^image\/(jpeg|png|gif|tiff)$/ }
 
