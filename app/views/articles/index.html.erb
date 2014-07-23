@@ -1,35 +1,47 @@
 <%= render "static_pages/header" %>
 
-<div class="content-wrapper">
+<% if @articles.present? %>
 
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Created</th>
-        <th>Title</th>
-        <th>Article Preview</th>
-        <th>Article Image</th>
-        <th>Options</th>
-      </tr>
-    </thead>
+      <div class="content-wrapper">
 
-    <% @articles.each do |article| %>
-      <tr>
-      <td><%= article.created_at.to_formatted_s(:short) %></td>
-      <td><%= article.title %></td>
-      <td><%= truncate(article.text, :length => 50, :separator => ' ') %><br><br></td>
-      <td><%= image_tag article.image.url(:thumb) %></td>
-      <td><%= link_to 'Show', article_path(article) %>
-          <%= link_to 'Edit', edit_article_path(article) %>
-          <%= link_to 'Delete', article_path(article),
-                    method: :delete, data: { confirm: 'Are you sure?'}
-                    %></td>
-      </tr>
-      <% end %>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Created</th>
+              <th>Title</th>
+              <th>Article Preview</th>
+              <th>Article Image</th>
+              <th>Options</th>
+            </tr>
+          </thead>
 
-  </table>
+          <% @articles.each do |article| %>
+            <tr>
+            <td><%= article.created_at.to_formatted_s(:short) %></td>
+            <td><%= article.title %></td>
+            <td><%= truncate(article.text, :length => 50, :separator => ' ') %><br><br></td>
+            <td><%= image_tag article.image.url(:thumb) %></td>
+            <td><%= link_to 'Show', article_path(article) %>
+                <%= link_to 'Edit', edit_article_path(article) %>
+                <%= link_to 'Delete', article_path(article),
+                          method: :delete, data: { confirm: 'Are you sure?'}
+                          %></td>
+            </tr>
+            <% end %>
 
-<%= will_paginate @articles %>
+        </table>
 
-</div>
+      <%= will_paginate @articles %>
 
+      </div>
+
+<% else %>
+      <div class="content-wrapper">
+        <p class="center"> No articles! </p>
+          <br>
+        <div class="pure-u-1 center" >
+          <%= link_to 'Back', :back, :class => "pure-button" %>
+        </div>
+      </div>
+
+<% end %>
