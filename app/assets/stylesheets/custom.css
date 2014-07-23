@@ -114,20 +114,3 @@
       color: white;
       }
 
-
-      /* error alert */
-
-      #error_explanation {
-        color: #f00;
-        font-family: "Open Sans", sans-serif;
-        ul {
-          list-style: none;
-          margin: 0 0 18px 8;
-        }
-      }
-
-      .field_with_errors {
-        @extend .control-group;
-        @extend .error;
-      }
-

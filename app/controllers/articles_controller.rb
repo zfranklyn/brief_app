@@ -39,7 +39,7 @@ class ArticlesController < ApplicationController
 	end
 
 	def index
-		@articles = Article.all.paginate(page: params[:page], per_page: 3)
+		@articles = Article.all.paginate(page: params[:page], per_page: 6)
 	end
 
 	def show
