@@ -2,33 +2,34 @@
 
 <div class="content-wrapper">
 
-<table class="table", style="margin-left: auto; margin-right: auto; margin-top: 2em; width: 60%">
-  <thead>
-    <tr>
-      <th>Created</th>
-      <th>Title</th>
-      <th>Article Preview</th>
-      <th>Article Image</th>
-      <th>Options</th>
-    </tr>
-  </thead>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Created</th>
+        <th>Title</th>
+        <th>Article Preview</th>
+        <th>Article Image</th>
+        <th>Options</th>
+      </tr>
+    </thead>
 
-  <% @articles.each do |article| %>
-    <tr>
-    <td><%= article.created_at.to_formatted_s(:short) %></td>
-    <td><%= article.title %></td>
-    <td><%= truncate(article.text, :length => 50, :separator => ' ') %><br><br></td>
-    <td><%= image_tag article.image.url(:thumb) %></td>
-    <td><%= link_to 'Show', article_path(article) %>
-        <%= link_to 'Edit', edit_article_path(article) %>
-        <%= link_to 'Delete', article_path(article),
-                  method: :delete, data: { confirm: 'Are you sure?'}
-                  %></td>
-    </tr>
-    <% end %>
+    <% @articles.each do |article| %>
+      <tr>
+      <td><%= article.created_at.to_formatted_s(:short) %></td>
+      <td><%= article.title %></td>
+      <td><%= truncate(article.text, :length => 50, :separator => ' ') %><br><br></td>
+      <td><%= image_tag article.image.url(:thumb) %></td>
+      <td><%= link_to 'Show', article_path(article) %>
+          <%= link_to 'Edit', edit_article_path(article) %>
+          <%= link_to 'Delete', article_path(article),
+                    method: :delete, data: { confirm: 'Are you sure?'}
+                    %></td>
+      </tr>
+      <% end %>
 
-</table>
+  </table>
+
+<%= will_paginate @articles %>
 
 </div>
 
-<%= will_paginate @articles %>
