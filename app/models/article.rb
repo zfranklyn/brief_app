@@ -10,6 +10,7 @@ has_attached_file :image,
     :path => ":rails_root/public/system/:class/:attachement/:id/:basename_:style.:extension",
     :url => "/system/:class/:attachement/:id/:basename_:style.:extension",
     :removable => true,
+    :default_url => ActionController::Base.helpers.asset_path('missing.png'),
     :styles => {
       :thumb    => ['100x100#',  :jpg, :quality => 70],
       :medium   => ['160x160#',  :jpg, :quality => 70],
@@ -24,6 +25,7 @@ has_attached_file :image,
       :large    => '-set colorspace sRGB -strip',
       :retina   => '-set colorspace sRGB -strip -sharpen 0x0.5'
     }
+
 
   validates_attachment :image,
     :size => { :in => 0..10.megabytes },
