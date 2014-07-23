@@ -1,9 +1,8 @@
 class Article < ActiveRecord::Base
 
-  validates :title, presence: true,
-                    length: { minimum: 5 } 
-  validates :originallink, presence: true 
-  validates :region, presence: true 
+  validates :title, presence: true
+  validates :originallink, presence: true
+  validates :region, presence: true
   validates :country, presence: true
 
 has_attached_file :image, 
