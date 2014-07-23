@@ -1,0 +1,23 @@
+/*Form CSS*/
+
+.form {
+	padding-bottom: 15%;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.form .pure-g .field {
+	margin: 0 auto;
+
+}
+
+
+.form .pure-g #article_text {
+	height: 300px;
+
+}
+
+.form .pure-g #button_area {
+	margin-top: 5%; 
+	margin-bottom:10%
+}

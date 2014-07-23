@@ -1,54 +1,43 @@
 
+<div>
+	<%= form_for(@article, :html => { :multipart => true, :class => 'pure-form pure-form-stacked form' } ) do |f| %>
 
-<div class="">
+		<div class="pure-g">
 
-		<div class="pure-form pure-form-stacked">
-			<div style="padding-left: 100px; padding-right: 100px">
+			<%= f.text_field :title, :placeholder => "Title...", :required => true, :class => "pure-input-1 field" %>
 
-			<%= form_for(@article, :html => { :multipart => true } ) do |f| %>
+		    <%= f.text_field :region, :placeholder => "Region...", :required => true, :class => "pure-input-1 field" %>
 
-					<%= f.text_field :title, :placeholder => "Title...", :required => true %>
-				<div class="pure-input-md-1-2">
-				    <%= f.text_field :region, :placeholder => "Region...", :required => true %>
-				</div>
-					<div class="pure-input-md-1-2">
-					<%= f.text_field :country, :placeholder => "Country...", :required => true %>
-				</div>
-					<div class="pure-input-1">
-				    <%= f.text_area :text, :placeholder => "Text...", :style => "height: 300px", :required => true %>
-				</div>
-					<div class="pure-input-1">
-				    <%= f.text_field :originallink, :placeholder => "Original Article URL...", :required => true %>
-				</div>
-					<div class="pure-input-1">
-				  	<%= f.label :image, 'Upload Image', :style => "" %><br>
-				</div>
-					<div class="pure-input-1">		  	
-				  	<% if @article.image.blank? != false %>
-						<%= image_tag @article.image.url(:thumb) %><br>
-					<% end %>
-				</div>
-					<div class="pure-input-1">
-					<%= f.file_field :image %>
-					<br>
-				</div>
-					<%= link_to 'Back', :back, :class => "pure-button" %>
-				    <%= f.submit 'Save Article', :class => 'pure-button pure-button-primary' %>
-					<% if local_assigns.has_key? :edit %>
-						<%= link_to 'Delete', article_path(@article),
-					          method: :delete, data: { confirm: 'Are you sure?'}, :class => "pure-button" %>
-					<% end %>
-			<% end %>
+
+			<%= f.text_field :country, :placeholder => "Country...", :required => true, :class => "pure-input-1 field" %>
+
+		    <%= f.text_area :text, :placeholder => "Text...", :class => "pure-input-1", :required => true %>
+
+		    <%= f.text_field :originallink, :placeholder => "Original Article URL...", :required => true, :class => "pure-input-1 field" %>
+
+			<div style="clear:right">		  	
+
+			  	<% if @article.image.blank? != false %>
+					<%= image_tag @article.image.url(:thumb) %><br>
+				<% end %>
+
+				<%= f.file_field :image %>
+				
+				<br>
+
 			</div>
+
+			<div class="pure-u-1", id="button_area" >
+				<%= link_to 'Back', :back, :class => "pure-button" %>
+			    <%= f.submit 'Save Article', :class => 'pure-button pure-button-primary' %>
+				<% if local_assigns.has_key? :edit %>
+					<%= link_to 'Delete', article_path(@article),
+				          method: :delete, data: { confirm: 'Are you sure?'}, :class => "pure-button button-cta" %>
+				<% end %>
+			</div>
+
 		</div>
 
+	<% end %>
 
 </div>
-
-<style>
-
-#field {
-	margin-bottom: 5%;
-}
-
-</style>

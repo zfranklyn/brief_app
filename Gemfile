@@ -33,6 +33,8 @@ gem 'spring',        group: :development
 
 gem 'rack'
 
+gem 'pry-byebug'
+
 #infinite scrolling gems
 gem 'will_paginate', '~> 3.0'
 
