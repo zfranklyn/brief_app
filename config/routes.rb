@@ -1,14 +1,15 @@
 Rails.application.routes.draw do
 
-  get 'users/new'
-
 resources :articles
+resources :users
 
 match '/mission',     to: 'static_pages#mission',    via: 'get'
 match '/stories',     to: 'static_pages#stories',    via: 'get'
 match '/contact',     to: 'static_pages#contact',    via: 'get'
 match '/about',       to: 'static_pages#about',      via: 'get'
 match '/admin',       to: 'static_pages#admin',      via: 'get'
+
+match '/signup',      to: 'users#new',               via: 'get'
 
 
 root 'static_pages#stories'

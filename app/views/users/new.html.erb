@@ -1,0 +1,21 @@
+
+
+<div class="pure-form">
+  <div class="pure-g">
+    
+    <%= form_for(@user) do |f| %>
+
+        <%= f.text_field :name, :placeholder => "Name...", :class => "pure-input-1 field", :required => "true"  %>
+
+        <%= f.text_field :email, :placeholder => "Email...", :class => "pure-input-1 field", :required => "true"  %>
+
+        <%= f.password_field :password, :placeholder => "Password...", :class => "pure-input-1 field", :required => "true"  %>
+
+        <%= f.password_field :password_confirmation, :placeholder => "Re-Type Password...", :class => "pure-input-1 field", :required => "true"  %>
+
+        <%= f.submit "Create my account", :class => "pure-button pure-button-primary" %>
+
+    <% end %>
+
+  </div>
+</div>
