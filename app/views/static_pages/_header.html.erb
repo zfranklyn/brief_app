@@ -11,7 +11,9 @@
 		        <li><%= link_to "MISSION", mission_path %></li>
 		        <li><%= link_to "ABOUT", about_path %></li>
 		        <li><%= link_to "CONTACT", contact_path %></li>
+		        <% if signed_in? %>
 		        <li><%= link_to "ADMIN", :controller => "static_pages", :action => "admin" %></li>
+		        <% end %>
 		    </ul>
 		</div>
 

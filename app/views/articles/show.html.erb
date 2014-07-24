@@ -21,11 +21,16 @@
 	<br>
 
 	<%= link_to 'Back', :back, :class => "pure-button" %>
-	<%= link_to 'Edit', edit_article_path(@article), :class => "pure-button" %>
+
 	<%= link_to 'Original Article', @article.originallink, :class => "pure-button",:target => "_blank" %>
+	
+	<% if signed_in? %>
+
+	<%= link_to 'Edit', edit_article_path(@article), :class => "pure-button" %>
+
 	<%= link_to 'Delete', article_path(@article),
 	                  method: :delete, data: { confirm: 'Are you sure?'}, :class => "pure-button", :style => "display: none" %>
 
-
+	<% end %>
 
 </div>

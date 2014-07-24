@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
 resources :articles
 resources :users
+resources :sessions, only: [:new, :create, :destroy]
 
 match '/mission',     to: 'static_pages#mission',    via: 'get'
 match '/stories',     to: 'static_pages#stories',    via: 'get'
@@ -10,6 +11,10 @@ match '/about',       to: 'static_pages#about',      via: 'get'
 match '/admin',       to: 'static_pages#admin',      via: 'get'
 
 match '/signup',      to: 'users#new',               via: 'get'
+
+match '/signup',      to: 'users#new',               via: 'get'
+match '/signin',      to: 'sessions#new',            via: 'get'
+match '/signout',     to: 'sessions#destroy',        via: 'delete'
 
 
 root 'static_pages#stories'

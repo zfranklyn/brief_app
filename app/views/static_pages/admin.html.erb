@@ -2,7 +2,17 @@
 
 <div class="content-wrapper center">
 
-	<p>Administrative Privileges. Use wisely.</p>
-<%= link_to 'New Article', new_article_path, :class => "pure-button pure-button-primary" %>
-<%= link_to "All Articles", articles_path, :class => "pure-button" %>
+<% if signed_in? %>
+<p>Administrative Privileges. Use wisely.</p>
+		
+	<%= link_to 'New Article', new_article_path, :class => "pure-button pure-button-primary" %>
+	<%= link_to "All Articles", articles_path, :class => "pure-button" %>	
+	<%= link_to "Sign out", signout_path, method: "delete", :style => "background: rgb(202,60,60); color: white;" ,:class => "pure-button" %>
+
+<% else %>
+
+	<%= link_to "Sign in", signin_path, method: "get", :class => "pure-button" %>
+
+<% end %>
+
 </div>

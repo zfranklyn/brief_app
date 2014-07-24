@@ -1,5 +1,7 @@
 class ArticlesController < ApplicationController
 
+before_action :signed_in_user, only: [:edit, :update, :destroy]
+
 	# http_basic_authenticate_with name: "pascal", password: "krummenacher", 
 	# except: [:index, :show]
 
@@ -54,5 +56,11 @@ private
 		params.require(:article).permit(:title, :region, :text, :image, :originallink, :country)
 	end
 
+		def signed_in_user
+			unless signed_in?
+				store_location
+				redirect_to admin_url, notice: "Please sign in." unless signed_in?
+			end
+		end
 
 end
