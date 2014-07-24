@@ -1,2 +1,12 @@
+<div class="container-wrapper">
+
+<p class="center">
 <%= @user.name %>, 
 <%= @user.email %>
+
+<% if signed_in? %>
+    | <%= link_to "delete", @user, method: :delete,
+                                  data: { confirm: "You sure?" } %>
+<% end %>
+</p>
+</div>

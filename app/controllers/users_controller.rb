@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
-before_action :signed_in_user, only: [:edit, :update]
+	http_basic_authenticate_with name: "pascal", password: "krummenacher", 
+	only: [:create]
+
+before_action :signed_in_user, only: [:edit, :update, :show, :destroy]
 
 
 	def index
@@ -42,6 +45,12 @@ before_action :signed_in_user, only: [:edit, :update]
 			render 'edit'
 		end
 	end
+
+	def destroy
+	    User.find(params[:id]).destroy
+	    flash[:success] = "User deleted."
+	    redirect_to users_url
+  	end
 
 
 	private
