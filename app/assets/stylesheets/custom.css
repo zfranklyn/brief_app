@@ -16,14 +16,14 @@
         font-family: 'Open Sans', sans-serif;
       }
 
-      .articlebody {
+/*      .articlebody {
         font-family: 'Lora', serif;
         text-align: justify;
         margin-left: auto;
         margin-right: auto;
-        padding-top: 1%;
+        padding: 1% 10% 0% 10%;
         max-width: 480px;
-      }
+      }*/
 
       .content {
         border-top-color: black;

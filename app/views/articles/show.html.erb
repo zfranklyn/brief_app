@@ -1,27 +1,31 @@
 <%= render "static_pages/header" %>
 
-<div class="articlebody">
+<div class="content-wrapper">
 
-<p>
-  <strong>
-  <%= @article.title %>
-  </strong>
-</p>
- 
-<p>
-	<%= @article.region + ', ' %><i><%= (@article.country).to_s %> </i>
-</p>
 
-<p style="text-align: justify; text-justify:inter-word;">
-	<%= simple_format(@article.text, :class => 'articlebody') %>
-</p>
 
-<br>
+	<p>
+	  <strong>
+	  <%= @article.title %>
+	  </strong>
+	</p>
+	 
+	<p>
+		<%= @article.region + ', ' %><i><%= (@article.country).to_s %> </i>
+	</p>
 
-<%= link_to 'Back', :back, :class => "pure-button" %>
-<%= link_to 'Edit', edit_article_path(@article), :class => "pure-button" %>
-<%= link_to 'Original Article', @article.originallink, :class => "pure-button",:target => "_blank" %>
-<%= link_to 'Delete', article_path(@article),
-                  method: :delete, data: { confirm: 'Are you sure?'}, :class => "pure-button", :style => "display: none" %>
+	<p style="text-align: justify; text-justify:inter-word;">
+		<%= simple_format(@article.text, :class => 'articlebody') %>
+	</p>
+
+	<br>
+
+	<%= link_to 'Back', :back, :class => "pure-button" %>
+	<%= link_to 'Edit', edit_article_path(@article), :class => "pure-button" %>
+	<%= link_to 'Original Article', @article.originallink, :class => "pure-button",:target => "_blank" %>
+	<%= link_to 'Delete', article_path(@article),
+	                  method: :delete, data: { confirm: 'Are you sure?'}, :class => "pure-button", :style => "display: none" %>
+
+
 
 </div>
