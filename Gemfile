@@ -2,9 +2,12 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.3'
+
 # Use pg as the database for Active Record
 gem 'pg'
 gem 'rails_12factor'
+
+
 gem 'taps'
 #encryption
 gem 'bcrypt-ruby', :require => 'bcrypt'
@@ -37,9 +40,6 @@ gem 'pry-byebug'
 
 #infinite scrolling gems
 gem 'will_paginate', '~> 3.0'
-
-#simple form for form generation and validation
-gem 'parsley-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
