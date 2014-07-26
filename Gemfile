@@ -7,6 +7,8 @@ gem 'rails', '4.1.3'
 gem 'pg'
 gem 'rails_12factor'
 
+gem 'purecss-rails'
+
 gem 'taps'
 #encryption
 gem 'bcrypt-ruby', :require => 'bcrypt'
